@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sftp4git v0.6</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="gapTop"></div>
+
+    <div class="info _warning">
+        <div class="line">
+            <div class="cell info__connection-status"></div>
+            <div class="cell">
+                <span>Обновлено в </span>
+                <span class="info__last-update"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-menu">
+        <div class="main-menu__btn-open">
+            Открыть/скрыть меню
+        </div>
+        <div class="main-menu__content open">
+            <div class="line">
+                Привет.<br />
+                Чтобы начать заполни поля ниже или выбери существующее подключение.
+            </div>
+            <div class="line vertical_padding">
+                <input class="input__repo" placeholder="Репозиторий (абсолютный путь)" type="text" value="" />
+            </div>
+            <div class="line">
+                <input class="input__username" placeholder="Имя пользователя" type="text" value="" />
+            </div>
+            <div class="line vertical_padding">
+                <input class="input__server_name" placeholder="Имя сервера" type="text" value="" />
+            </div>
+            <div class="line">
+                <input class="input__server_path" placeholder="Абсолютный путь на сервере" type="text" value="" />
+            </div>
+
+            <div class="line vertical_padding">
+                <div class="cell">
+                    <div class="btn btn-blue btn__connect">Подключиться</div>
+                </div>
+                <div class="cell">
+                    <div class="btn btn-red btn__disconnect">Отключиться</div>
+                </div>
+            </div>
+
+            <div class="line">
+                История подключений
+            </div>
+
+            <div class="vertical_padding connections__history">
+                Пока тут пусто
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="content close">
+        <div class="head line line_center">
+            <div class="head__connection-name">user@server.name.1 (repo)</div>
+        </div>
+        
+        <div class="tip">
+            <div class="tip__repo"></div>
+            <div class="tip__server-path"></div>
+        </div>
+        
+        <div class="actual">
+            <div class="block__h3">
+                Индекс git'а:
+            </div>
+
+            <div class="head line head__btns">
+                <div class="btn btn-green btn__watch-all">
+                    Отслеживать все
+                </div>
+                <div class="btn btn-red btn__unwatch-all">
+                    Прекратить отслеживать
+                </div>
+                <div class="btn btn-blue" onclick="state.git.shortStatus(gitShortStatusProcessing)">
+                    Обновить индекс git
+                </div>
+                <div class="btn btn-blue btn__push-all">
+                    Отправить все
+                </div>
+            </div>
+
+            <div class="actual__list">
+                Пока тут пусто
+            </div>
+        </div>
+
+        <div class="history">
+            <div class="block__h3">
+                История отправки:
+            </div>
+
+            <div class="history__list">
+                Пока тут пусто
+            </div>
+        </div>
+    </div>
+
+    <div class="gapBottom"></div>
+</div>
+
+<div class="log close"></div>
+
+<div class="paranja close">
+    <div class="popup close">
+        <div class="popup__text"></div>
+        <div class="popup__close"></div>
+    </div>
+</div>
+
+</body>
+</html>
